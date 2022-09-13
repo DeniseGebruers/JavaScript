@@ -1,38 +1,60 @@
-const precio1 = 720;
-const precio2 = 880;
-const precio3 = 325;
+class Producto {
+    constructor (nombre, precio) {
+        this.nombre = nombre;
+        this.precio = parseFloat(precio);
+        this.cantidad = 8;
+        this.vendido = false;
+    }
 
+    sumarIva () {
+        return (this.precio * 1.21).toFixed(2);
+    }
 
-let nombre = prompt ("Ingrese su nombre: ");
-console.log (nombre);
-let pregunta = prompt ("Hola " + nombre + ", ingrese el producto que quiera añadir a su carrito (producto1 o producto2)");
-console.log (pregunta);
-
-while (pregunta != "producto1" && pregunta != "producto2") {
-    alert ("Por favor, ingresá producto1 o producto2");
-    pregunta = prompt ("Hola " + nombre + ", ingrese el producto que quiera añadir a su carrito (producto1 o producto2)");
+    vender () {
+        this.vendido = true;
+    }
 }
 
-if (pregunta == "producto1") {
-    alert ("Producto añadido. El precio es " + precio1);
-    console.log (precio1);
-} else {
-    alert ("Producto añadido. El precio es " + precio2);
-    console.log (precio2);
+console.log ("Los precios de nuestros productos son: ");
+
+const mateDiseño1 = new Producto ("Diseño1", 720);
+console.log ("El Diseño1 cuesta: " + mateDiseño1.precio + ", con el IVA el precio final es: " + mateDiseño1.sumarIva());
+
+const mateDiseño2 = new Producto ("Diseño2", 850);
+console.log ("El Diseño2 cuesta: " + mateDiseño2.precio + ", con el IVA el precio final es: " + mateDiseño2.sumarIva());
+
+const accesorioMate = new Producto ("Bombilla", 325);
+console.log ("La Bombilla cuesta: " + accesorioMate.precio + ", con el IVA el precio final es: " + accesorioMate.sumarIva());
+
+
+
+const stockProducto = [mateDiseño1, mateDiseño2, accesorioMate];
+console.log (stockProducto);
+
+function colorBombilla (stockProducto) {
+    for (const Producto of stockProducto) {
+        if (Producto.nombre === "Bombilla")
+        console.log ("Debes elegir un color de bombilla");
+    }
 }
 
-let carrito = prompt ("¿Desea añadir producto3 al carrito? Responda si o no");
+colorBombilla (stockProducto);
+console.log (stockProducto);
 
-if (carrito == "si" && pregunta == "producto1") {
-    let sumaTotal = (a,b) => precio1 + precio3;
-    console.log (sumaTotal (850,950));
-    alert ("¡Muchas gracias por su compra!");
-} else if (carrito == "si" && pregunta == "producto2") {
-    let sumaTotal = (a,b) => precio2 + precio3;
-    console.log (sumaTotal (900,950));
-    alert ("¡Muchas gracias por su compra!");
-} else {
-    alert ("¡Muchas gracias por su compra!");
-}
+
+mateDiseño1.vender();
+accesorioMate.vender();
+
+
+
+let carrito =  stockProducto.slice (0,2);
+console.log (carrito);
+
+let indiceBombilla = stockProducto.indexOf(accesorioMate);
+console.log (indiceBombilla);
+
+let booleanoBombilla = stockProducto.includes (accesorioMate);
+console.log (booleanoBombilla);
+
 
 
