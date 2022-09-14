@@ -15,35 +15,44 @@ class Producto {
     }
 }
 
-console.log ("Los precios de nuestros productos son: ");
+let nombre = prompt("Ingrese su nombre: ");
+console.log (nombre);
+let saludo = prompt ("Hola " + nombre + ", ingrese el producto que desea (producto1 o producto2)");
+console.log (saludo);
 
 const mateDiseño1 = new Producto ("Diseño1", 720);
-console.log ("El Diseño1 cuesta: " + mateDiseño1.precio + ", con el IVA el precio final es: " + mateDiseño1.sumarIva());
-
 const mateDiseño2 = new Producto ("Diseño2", 850);
-console.log ("El Diseño2 cuesta: " + mateDiseño2.precio + ", con el IVA el precio final es: " + mateDiseño2.sumarIva());
-
 const accesorioMate = new Producto ("Bombilla", 325);
-console.log ("La Bombilla cuesta: " + accesorioMate.precio + ", con el IVA el precio final es: " + accesorioMate.sumarIva());
-
-
-
-const stockProducto = [mateDiseño1, mateDiseño2, accesorioMate];
-console.log (stockProducto);
-
-function colorBombilla (stockProducto) {
-    for (const Producto of stockProducto) {
-        if (Producto.nombre === "Bombilla")
-        console.log ("Debes elegir un color de bombilla");
-    }
-}
-
-colorBombilla (stockProducto);
-console.log (stockProducto);
-
 
 mateDiseño1.vender();
 accesorioMate.vender();
+
+
+if (saludo === "producto1") {
+    alert ("Producto añadido. El precio es: $" + mateDiseño1.precio + ", con el IVA el precio final es: $" + mateDiseño1.sumarIva());
+} else if (saludo === "producto2") {
+    alert ("Producto añadido. El precio es: $" + mateDiseño2.precio + ", con el IVA el precio final es: $" + mateDiseño2.sumarIva());
+} else {
+    alert ("No es un producto existente. Vuelva a intentar.");
+}
+
+let accesorio = prompt ("Ingrese Bombilla para agregar el producto al carrito, si no lo desea ingrese SALIR");
+
+const stockProducto = [mateDiseño1, mateDiseño2, accesorioMate];
+
+function Bombilla (stockProducto) {
+    for (const Producto of stockProducto) {
+        if (Producto.nombre === "Bombilla" && accesorio === "Bombilla") {
+            alert("La Bombilla cuesta: $" + accesorioMate.precio + ", con el IVA el precio final es: $" + accesorioMate.sumarIva());
+            alert ("¡Gracias por tu compra " + nombre +  ", regresa pronto!");
+            } if (accesorio === "SALIR") {
+                alert ("Muchas gracias por su compra.");
+            }
+        }
+    }
+
+Bombilla (stockProducto);
+console.log (stockProducto)
 
 
 
@@ -55,6 +64,3 @@ console.log (indiceBombilla);
 
 let booleanoBombilla = stockProducto.includes (accesorioMate);
 console.log (booleanoBombilla);
-
-
-
