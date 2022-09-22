@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Azúcar Amargo Mates</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
-<body>
+<body class="container">
     <h1>Azúcar Amargo Mates</h1>
-    <h2>¡Bienvenido a nuestra web!</h2>
-    <p>En Azúcar Amargo pintamos mates de algarrobo a mano. Contamos con diseños propios. <br> En este momento ofrecemos mates perita (Diseño1) y mates hexagonales (Diseño2). Además, podés elegir la bombilla (accesorioMate) que más te guste. <br> ¡Gracias por visitarnos!</p>
-
+    <h2>Tienda Online</h2>
+    <br>
+    <div class="d-flex flex-wrap gap-2" id="stockProductos"></div>
+    <hr>
+    <br>
+    <h4 id="verCarrito">Mi carrito:</h4>
+    <h5>Total de la compra: $<span id="totalCompra">0</span></h5>
+    <div class="d-flex flex-wrap gap-2" id="totalCarrito"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>
