@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dongle:wght@300&family=Montserrat:wght@100;300;700&family=Open+Sans:wght@300&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+
+    .navegacion__logo {
+        width: 100px;
+        margin-left: 10px;
+    }
+
+    .navegacion__menu {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        text-align: end;
+        font-size: 0.9rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight:bold;
+    }
+
+    .navegacion__li a {
+        margin: 0 10px;
+        padding: 5px;
+        text-decoration: none;
+        color: gray;
+    }
+
+    .titulo {
+        margin-top: 2rem;
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+        font-family: 'Bebas Neue', cursive;
+        font-weight: 400;    
+        text-align: center;
+        color: #E25C5A;
+    }
+
+    .subtitulo {
+        font-size: 2rem;
+        font-family: 'Dongle', sans-serif;
+        font-weight: 300;
+        text-align: center;
+        color: gray;
+    }
+
+    .compra {
+        font-family: 'Bebas Neue', cursive;
+        letter-spacing: 1.5px;
+        font-weight: 400;
+        font-size: 2rem;
+        color: #E25C5A;
+    }
+
+    .compra__total {
+        font-size: 2rem;
+        font-family: 'Dongle', sans-serif;
+        color: gray;
+    }
+
+    .stockGrilla {
+        margin-left: 1rem;
+    }
+
+    .card {
+        display: flex;
+        text-align: center;
+        height: 100%;
+        justify-content: center;
+    }
