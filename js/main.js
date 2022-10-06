@@ -43,6 +43,15 @@ Productos.forEach(producto => {
     const boton = document.getElementById (`boton${producto.id}`);
     boton.addEventListener ("click", () => {
         agregarAlCarrito(producto.id);
+        Toastify ({
+            text: "Producto agregado al carrito",
+            duration: 2000,
+            gravity: "bottom",
+            position: "right",
+            style: {
+                background: "linear-gradient(to right, #a1a1a1, #d7d5d5)",
+            },
+        }).showToast();
     })
 });
 
@@ -57,14 +66,12 @@ if(localStorage.getItem("carrito")) {
 
 const agregarAlCarrito = (id) => {
     const producto = Productos.find(producto => producto.id === id);
-    const productoAgregado = carrito.find (producto => producto.id === id) ? productoAgregado.cantidad++ : carrito.push(producto);
-    /* Reemplacé el operador ternario, que no sé si sería la forma correcta de aplicarlo, por este condicional que tenía:
+    const productoAgregado = carrito.find (producto => producto.id === id); 
     if (productoAgregado){
         productoAgregado.cantidad++;
     } else {
         carrito.push(producto);
     }
-    */
     carritoActualizado();
     console.log (carrito);
     localStorage.setItem("carrito", JSON.stringify(carrito));
@@ -88,6 +95,7 @@ function carritoActualizado () {
                             <div class="card-body">
                                 <h5 class="card-title">${producto.descripcion}</h5>
                                 <p class="card-text">$${producto.precio}</p>
+                                <p>Cantidad: ${producto.cantidad}</p>
                                 <button onClick= "eliminarProducto (${producto.id})" class= "btn btn-danger">Eliminar del carrito</button>
                             </div>
                         </div>
@@ -101,6 +109,12 @@ function carritoActualizado () {
 const eliminarProducto = (id) => {
     const producto = carrito.find(producto => producto.id === id);
     carrito.splice(carrito.indexOf(producto),1);
+    Swal.fire({
+        title: "Producto eliminado del carrito",
+        icon: "success",
+        confirmButtonText: "Aceptar",
+        confirmButtonColor: "#E25C5A", 
+    })
     carritoActualizado();
 }
 
