@@ -4,7 +4,8 @@
         "nombre": "Diseño1", 
         "precio": 1370, 
         "descripcion": "Hexagonal Floreado", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "img/1.jpg"
     },
 
     {
@@ -12,7 +13,8 @@
         "nombre": "Diseño2", 
         "precio": 1150, 
         "descripcion": "Hojas", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "img/2.jpg"
     },
 
     {
@@ -20,7 +22,8 @@
         "nombre": "Diseño3", 
         "precio": 1420, 
         "descripcion": "Paz y flores", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "img/3.jpg"
     },
 
     
@@ -29,7 +32,8 @@
         "nombre": "Diseño4", 
         "precio": 1600, 
         "descripcion": "Personalizado", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "img/4.jpg"
     },
 
     {
@@ -37,7 +41,8 @@
         "nombre": "Diseño5", 
         "precio": 1570, 
         "descripcion": "Llama", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "img/5.jpg"
     },
 
     {
@@ -45,7 +50,8 @@
         "nombre": "Diseño6", 
         "precio": 1480, 
         "descripcion": "Fase Lunar", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "img/6.jpg"
     },
 
     {
@@ -53,7 +59,8 @@
         "nombre": "Diseño7", 
         "precio": 1100, 
         "descripcion": "Maradona", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "img/7.jpg"
     },
     
     {
@@ -61,7 +68,8 @@
         "nombre": "Diseño8", 
         "precio": 1320, 
         "descripcion": "Mano de Fática", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "img/8.jpg"
     },
     
     {
@@ -69,7 +77,8 @@
         "nombre": "Diseño9", 
         "precio": 1600, 
         "descripcion": "Coya", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "img/9.jpg"
     },
 
     {
@@ -77,7 +86,8 @@
         "nombre": "Diseño10", 
         "precio": 1450, 
         "descripcion": "Perita Floreado", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "img/10.jpg"
     },
     
     {
@@ -85,7 +95,8 @@
         "nombre": "Diseño11", 
         "precio": 1400, 
         "descripcion": "Auto clásico", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "img/11.jpg"
     },
 
     {
@@ -93,7 +104,8 @@
         "nombre": "Diseño12", 
         "precio": 1100, 
         "descripcion": "Palmeras", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "img/12.jpg"
     },
 
     {
