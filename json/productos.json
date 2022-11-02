@@ -45,7 +45,8 @@
         "nombre": "Diseño6", 
         "precio": 1480, 
         "descripcion": "Fase Lunar", 
-        "cantidad": 1},
+        "cantidad": 1
+    },
 
     {
         "id": 7, 
@@ -139,7 +140,9 @@
         "nombre": "Diseño18", 
         "precio": 1350, 
         "descripcion": "Búho", 
-        "cantidad": 1},
+        "cantidad": 1
+    },
+
     {
         "id": 19, 
         "nombre": "Diseño19", 

@@ -1,57 +1,116 @@
-class Producto {
-    constructor(nombre, id, precio, descripcion, cantidad) {
-        this.id = id;
-        this.nombre = nombre;
-        this.precio = precio.toFixed(2);
-        this.descripcion = descripcion;
-        this.cantidad = cantidad;
-    }
-}
-
-const Productos = ["Diseño1", "Diseño2", "Diseño3", "Diseño4", "Diseño5", "Diseño6","Diseño7","Diseño8","Diseño9","Diseño10","Diseño11","Diseño12","Diseño13","Diseño14","Diseño15","Diseño16","Diseño17","Diseño18","Diseño19","Diseño20","Bombilla"];
-console.log (Productos);
-
-const stockProductos = document.getElementById("stockProductos");
-
-const listadoProductos = "json/productos.json";
-
-fetch (listadoProductos)
-    .then (response => response.json())
-    .then (productos => {
-        productos.forEach(producto => {
-            const divStock = document.createElement("div");
-            divStock.innerHTML = `  <div class="card mb-3 stockGrilla" style="max-width: 400px;">
-                                        <div class="row g-0">
-                                            <div class="col-md-6">
-                                                <img src="img/${producto.id}.jpg" class="img-fluid rounded-start" alt="Mates">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">${producto.descripcion}</h5>
-                                                    <p class="card-text">$${producto.precio}</p>
-                                                    <button class= "btn btn-danger" id="boton(${producto.id})">Comprar</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>`
-            stockProductos.appendChild(divStock);
-            const boton = document.getElementById (`boton(${producto.id})`);
-            boton.addEventListener ("click", () => {
-                agregarAlCarrito(producto.id);
-                Toastify ({
-                    text: "Producto agregado al carrito",
-                    duration: 2000,
-                    gravity: "bottom",
-                    position: "right",
-                    style: {
-                        background: "linear-gradient(to right, #a1a1a1, #d7d5d5)",
-                    },
-                }).showToast();
-            })
-        })
-    });
+const abrirCarrito = document.getElementById("abrirCarrito");
+const modalCarrito = document.getElementById("modalCarrito");
+const vaciarCarrito = document.getElementById("vaciarCarrito");
+const contenidoCarrito = document.getElementById("contenidoCarrito");
+const precioTotal = document.getElementById("precioTotal");
+const confirmarCarrito = document.getElementById("confirmarCarrito");
 
 const carrito = [];
+
+const productos = [];
+const miLocalStorage = window.localStorage;
+const cargarProductos = async () => {
+    const response = await fetch("json/productos.json");
+    const elementos = await response.json();
+    elementos.forEach((elemento) => {
+        productos.push(elemento);
+    });
+};
+
+export const agruparAsync = async () => {
+    await cargarProductos();
+    mostrarProductos(productos);
+};
+agruparAsync();
+
+const mostrarProductos = (productos) => {
+    productos.forEach((producto) => {
+        const div = document.createElement("div");
+        div.innerHTML += `<div class="card " style="width: 18rem;">
+                    <img src="img/${producto.id}.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-text">${producto.descripcion}</h5>
+                        <p class="card-text">Precio: $ ${producto.precio}</p>
+                        <button class="btn btn-danger" id="boton${producto.id}">Comprar</button>
+                    </div>
+                </div>`;
+        menu.appendChild(div);
+        const boton = document.getElementById(`boton${producto.id}`);
+        boton.addEventListener("click", () => {
+            agregarAlCarrito(producto.id);
+            Toastify({
+                text: "Producto agregado al carrito",
+                duration: 2000,
+                gravity: "bottom",
+                position: "right",
+                style: {
+                    background: "#e25c5a",
+                },
+            }).showToast();
+        });
+    });
+};
+mostrarProductos(productos);
+
+const agregarAlCarrito = (prodId) => {
+    const existe = carrito.some((producto) => producto.id === prodId);
+    if (existe) {
+        const prod = carrito.map((prod) => {
+            if (prod.id === prodId) {
+                prod.cantidad++;
+            }
+        });
+    } else {
+        const item = productos.find((prod) => prod.id === prodId);
+        if (item) {
+            const prod = productos.map((prod) => {
+                if (prod.id === prodId) {
+                    prod.cantidad = 1;
+                }
+            });
+        }
+        carrito.push(item);
+    }
+    console.log(carrito);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    actualizarCarrito();
+};
+
+const eliminarDelCarrito = (prodId) => {
+    console.log(prodId);
+    const item = carrito.find((prod) => prod.id === prodId);
+    const indice = carrito.indexOf(item);
+    carrito.splice(indice, 1);
+    actualizarCarrito();
+};
+
+const actualizarCarrito = () => {
+    contenidoCarrito.innerHTML = "";
+    carrito.forEach((prod) => {
+        const div = document.createElement("div");
+        div.className = "itemsCarrito";
+        div.innerHTML = `
+        <img class="px-1" src="img/${prod.id}.jpg" alt="" width="40px" height="40px">
+        <p class="px-2"> <b>${prod.descripcion}</b></p>
+        <p class="px-2"><b>Precio: $${prod.precio}</b></p
+        <p class="px-2"><b>Cantidad: <span id ="cantidad" class="px-2">${prod.cantidad}</b> </span></p>
+        <button id="id${prod.id}" class ="botonEliminar"><i class="fa-solid fa-trash"></i></button>`;
+        contenidoCarrito.appendChild(div);
+        let botonid = document.getElementById(`id${prod.id}`);
+        botonid.addEventListener("click", () => eliminarDelCarrito(prod.id));
+    });
+    calculoPrecioTotal();
+    const contadorCarrito = document.getElementById("contadorCarrito");
+    contadorCarrito.innerText = carrito.length;
+};
+
+const calculoPrecioTotal = () => {
+    let total = 0
+    carrito.forEach (producto => {
+        total += producto.precio * producto.cantidad;
+    })
+    precioTotal.innerHTML = total;
+};
 
 if(localStorage.getItem("carrito")) {
     let productosCarrito = JSON.parse(localStorage.getItem("carrito"));
@@ -60,75 +119,36 @@ if(localStorage.getItem("carrito")) {
     }
 }
 
-const agregarAlCarrito = (id) => {
-    const producto = Productos.find (producto => producto.id === id);
-    const productoAgregado = carrito.find (producto => producto === id)
-    if (productoAgregado){
-        productoAgregado.cantidad++;
-    } else {
-        carrito.push(producto);
-    }
-    carritoActualizado();
-    console.log (carrito);
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-}
+// Eventos de botones del carrito:
 
-const totalCarrito = document.getElementById("totalCarrito");
-const verCarrito = document.getElementById ("verCarrito");
+abrirCarrito.addEventListener("click", () => {
+    modalCarrito.classList.toggle("d-none");
+})
 
-verCarrito.addEventListener("click", carritoActualizado);
-
-function carritoActualizado() {
-    let aux = "";
-    fetch (listadoProductos)
-        .then (response => response.json())
-        .then (carrito => {
-            carrito.forEach ( producto => {
-                aux += `  
-                        <div class="card mb-3" style="max-width: 400px;">
-                            <div class="row g-0">
-                                <div class="col-md-6">
-                                    <img src="img/${producto.id}.jpg" class="img-fluid rounded-start" alt="Mates">
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card-body">
-                                        <h5 class="card-title">${producto.descripcion}</h5>
-                                        <p class="card-text">$${producto.precio}</p>
-                                        <p>Cantidad: ${producto.cantidad}</p>
-                                        <button onClick = "eliminarProducto (${producto.id})" class= "btn btn-danger">Eliminar del carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>`
-            });
-    totalCarrito.innerHTML = aux;
-    calculoTotalCompra();
-    });
-}
-
-const eliminarProducto = (id) => {
-    const producto = carrito.find(producto => producto === id);
-    carrito.splice(carrito.indexOf(producto),1);
-    Swal.fire({
-        title: "Producto eliminado del carrito",
-        icon: "success",
-        confirmButtonText: "Aceptar",
-        confirmButtonColor: "#E25C5A", 
-    })
-    carritoActualizado();
-}
-
-
-const totalCompra = document.getElementById("totalCompra");
-
-const calculoTotalCompra = () => {
-    let total = 0
-    fetch (listadoProductos)
-    .then (response => response.json())
-    .then (carrito => { 
-        carrito.forEach (producto => {
-            total += producto.precio * producto.cantidad;
-        })
-    totalCompra.innerHTML = total;
+vaciarCarrito.addEventListener("click", () => {
+    carrito.length = 0;
+    actualizarCarrito();
+    localStorage.clear();
 });
-}
+
+confirmarCarrito.addEventListener("click", () => {
+    let suma = carrito.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0);
+    console.log (suma);
+    if (carrito.length == 0) {
+        Swal.fire({
+            icon: 'error',
+            title: '¡Error!',
+            text: '¡Tu carrito está vacío!',
+            confirmButtonColor: "#E25C5A"
+        })
+    } else {
+        Swal.fire({
+            icon: "success",
+            title: "¡Pedido confirmado!",
+            text: `El importe a abonar es de $${suma}. Pulse PAGAR para ser redirigido al sitio`, 
+            confirmButtonText: "Pagar",
+            confirmButtonColor: "#E25C5A"
+    });
+    carrito.length = 0;
+    actualizarCarrito();
+}});
