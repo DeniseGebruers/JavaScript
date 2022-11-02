@@ -38,153 +38,144 @@
 
     {
         "id": 5, 
-        "nombre": "Diseño5", 
-        "precio": 1570, 
-        "descripcion": "Llama", 
-        "cantidad": 1,
-        "img": "./img/5.JPG"
-    },
-
-    {
-        "id": 6, 
         "nombre": "Diseño6", 
         "precio": 1480, 
         "descripcion": "Fase Lunar", 
         "cantidad": 1,
-        "img": "./img/6.jpg"
+        "img": "./img/5.jpg"
     },
 
     {
-        "id": 7, 
+        "id": 6, 
         "nombre": "Diseño7", 
         "precio": 1100, 
         "descripcion": "Maradona", 
+        "cantidad": 1,
+        "img": "./img/6.jpg"
+    },
+    
+    {
+        "id": 7, 
+        "nombre": "Diseño8", 
+        "precio": 1320, 
+        "descripcion": "Mano de Fática", 
         "cantidad": 1,
         "img": "./img/7.jpg"
     },
     
     {
         "id": 8, 
-        "nombre": "Diseño8", 
-        "precio": 1320, 
-        "descripcion": "Mano de Fática", 
-        "cantidad": 1,
-        "img": "./img/8.jpg"
-    },
-    
-    {
-        "id": 9, 
         "nombre": "Diseño9", 
         "precio": 1600, 
         "descripcion": "Coya", 
         "cantidad": 1,
-        "img": "./img/9.jpg"
+        "img": "./img/8.jpg"
     },
 
     {
-        "id": 10, 
+        "id": 9, 
         "nombre": "Diseño10", 
         "precio": 1450, 
         "descripcion": "Perita Floreado", 
         "cantidad": 1,
-        "img": "./img/10.jpg"
+        "img": "./img/9.jpg"
     },
     
     {
-        "id": 11, 
+        "id": 10, 
         "nombre": "Diseño11", 
         "precio": 1400, 
         "descripcion": "Auto clásico", 
+        "cantidad": 1,
+        "img": "./img/10.jpg"
+    },
+
+    {
+        "id": 11, 
+        "nombre": "Diseño12", 
+        "precio": 1100, 
+        "descripcion": "Palmeras", 
         "cantidad": 1,
         "img": "./img/11.jpg"
     },
 
     {
         "id": 12, 
-        "nombre": "Diseño12", 
-        "precio": 1100, 
-        "descripcion": "Palmeras", 
+        "nombre": "Diseño13", 
+        "precio": 1250, 
+        "descripcion": "Girasol", 
         "cantidad": 1,
         "img": "./img/12.jpg"
     },
 
     {
         "id": 13, 
-        "nombre": "Diseño13", 
-        "precio": 1250, 
-        "descripcion": "Girasol", 
+        "nombre": "Diseño14", 
+        "precio": 1400, 
+        "descripcion": "Combi Playera", 
         "cantidad": 1,
         "img": "./img/13.jpg"
     },
 
     {
         "id": 14, 
-        "nombre": "Diseño14", 
-        "precio": 1400, 
-        "descripcion": "Combi Playera", 
+        "precio": 1370, 
+        "descripcion": "Hexagonal Colores", 
         "cantidad": 1,
-        "img": "./img/14.jpg"
+        "img": "./img/154.jpg"
     },
 
     {
         "id": 15, 
-        "precio": 1370, 
-        "descripcion": "Hexagonal Colores", 
-        "cantidad": 1,
-        "img": "./img/15.jpg"
-    },
-
-    {
-        "id": 16, 
         "nombre": "Diseño16", 
         "precio": 1420, 
         "descripcion": "Floreado", 
         "cantidad": 1,
-        "img": "./img/16.jpg"
+        "img": "./img/15.jpg"
     },
     
     {
-        "id": 17, 
+        "id": 16, 
         "nombre": "Diseño17", 
         "precio": 1450, 
         "descripcion": "Bicicleta", 
+        "cantidad": 1,
+        "img": "./img/16.jpg"
+    },
+
+    {
+        "id": 17, 
+        "nombre": "Diseño18", 
+        "precio": 1350, 
+        "descripcion": "Búho", 
         "cantidad": 1,
         "img": "./img/17.jpg"
     },
 
     {
         "id": 18, 
-        "nombre": "Diseño18", 
-        "precio": 1350, 
-        "descripcion": "Búho", 
+        "nombre": "Diseño19", 
+        "precio": 1100, 
+        "descripcion": "Mapamundi", 
         "cantidad": 1,
         "img": "./img/18.jpg"
     },
 
     {
         "id": 19, 
-        "nombre": "Diseño19", 
-        "precio": 1100, 
-        "descripcion": "Mapamundi", 
+        "nombre": "Diseño20", 
+        "precio": 1250, 
+        "descripcion": "Stich", 
         "cantidad": 1,
         "img": "./img/19.jpg"
     },
 
     {
         "id": 20, 
-        "nombre": "Diseño20", 
-        "precio": 1250, 
-        "descripcion": "Stich", 
-        "cantidad": 1,
-        "img": "./img/20.jpg"
-    },
-
-    {
-        "id": 21, 
         "nombre": "Bombillas", 
         "precio": 720, 
         "descripcion": "Bombilla a elección", 
         "cantidad": 1,
-        "img": "./img/21.jpg"
+        "img": "./img/20.jpg"
     }
 ]
