@@ -27,7 +27,7 @@ const mostrarProductos = (productos) => {
     productos.forEach((producto) => {
         const div = document.createElement("div");
         div.innerHTML += `<div class="card " style="width: 18rem;">
-                    <img src="img/${producto.id}.jpg" class="card-img-top" alt="...">
+                    <img src="${producto.img}" class="card-img-top" alt="...">
                     <div class="card-body text-center">
                         <h5 class="card-text">${producto.descripcion}</h5>
                         <p class="card-text">Precio: $ ${producto.precio}</p>
@@ -90,7 +90,7 @@ const actualizarCarrito = () => {
         const div = document.createElement("div");
         div.className = "itemsCarrito";
         div.innerHTML = `
-        <img class="px-1" src="img/${prod.id}.jpg" alt="" width="40px" height="40px">
+        <img class="px-1" src="${prod.img}" alt="" width="40px" height="40px">
         <p class="px-2"> <b>${prod.descripcion}</b></p>
         <p class="px-2"><b>Precio: $${prod.precio}</b></p
         <p class="px-2"><b>Cantidad: <span id ="cantidad" class="px-2">${prod.cantidad}</b> </span></p>
