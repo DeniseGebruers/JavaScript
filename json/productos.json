@@ -38,16 +38,16 @@
 
     {
         "id": 5, 
-        "nombre": "Diseño6", 
+        "nombre": "Diseño5", 
         "precio": 1480, 
         "descripcion": "Fase Lunar", 
         "cantidad": 1,
-        "img": "./img/5.jpg"
+        "img": "./img/5.JPG"
     },
 
     {
         "id": 6, 
-        "nombre": "Diseño7", 
+        "nombre": "Diseño6", 
         "precio": 1100, 
         "descripcion": "Maradona", 
         "cantidad": 1,
@@ -56,7 +56,7 @@
     
     {
         "id": 7, 
-        "nombre": "Diseño8", 
+        "nombre": "Diseño7", 
         "precio": 1320, 
         "descripcion": "Mano de Fática", 
         "cantidad": 1,
@@ -65,7 +65,7 @@
     
     {
         "id": 8, 
-        "nombre": "Diseño9", 
+        "nombre": "Diseño8", 
         "precio": 1600, 
         "descripcion": "Coya", 
         "cantidad": 1,
@@ -74,7 +74,7 @@
 
     {
         "id": 9, 
-        "nombre": "Diseño10", 
+        "nombre": "Diseño9", 
         "precio": 1450, 
         "descripcion": "Perita Floreado", 
         "cantidad": 1,
@@ -83,7 +83,7 @@
     
     {
         "id": 10, 
-        "nombre": "Diseño11", 
+        "nombre": "Diseño10", 
         "precio": 1400, 
         "descripcion": "Auto clásico", 
         "cantidad": 1,
@@ -92,7 +92,7 @@
 
     {
         "id": 11, 
-        "nombre": "Diseño12", 
+        "nombre": "Diseño11", 
         "precio": 1100, 
         "descripcion": "Palmeras", 
         "cantidad": 1,
@@ -101,7 +101,7 @@
 
     {
         "id": 12, 
-        "nombre": "Diseño13", 
+        "nombre": "Diseño12", 
         "precio": 1250, 
         "descripcion": "Girasol", 
         "cantidad": 1,
@@ -110,7 +110,7 @@
 
     {
         "id": 13, 
-        "nombre": "Diseño14", 
+        "nombre": "Diseño13", 
         "precio": 1400, 
         "descripcion": "Combi Playera", 
         "cantidad": 1,
@@ -119,15 +119,16 @@
 
     {
         "id": 14, 
+        "nombre": "Diseño14", 
         "precio": 1370, 
         "descripcion": "Hexagonal Colores", 
         "cantidad": 1,
-        "img": "./img/154.jpg"
+        "img": "./img/14.jpg"
     },
 
     {
         "id": 15, 
-        "nombre": "Diseño16", 
+        "nombre": "Diseño15", 
         "precio": 1420, 
         "descripcion": "Floreado", 
         "cantidad": 1,
@@ -136,7 +137,7 @@
     
     {
         "id": 16, 
-        "nombre": "Diseño17", 
+        "nombre": "Diseño16", 
         "precio": 1450, 
         "descripcion": "Bicicleta", 
         "cantidad": 1,
@@ -145,7 +146,7 @@
 
     {
         "id": 17, 
-        "nombre": "Diseño18", 
+        "nombre": "Diseño17", 
         "precio": 1350, 
         "descripcion": "Búho", 
         "cantidad": 1,
@@ -154,7 +155,7 @@
 
     {
         "id": 18, 
-        "nombre": "Diseño19", 
+        "nombre": "Diseño18", 
         "precio": 1100, 
         "descripcion": "Mapamundi", 
         "cantidad": 1,
@@ -163,7 +164,7 @@
 
     {
         "id": 19, 
-        "nombre": "Diseño20", 
+        "nombre": "Diseño19", 
         "precio": 1250, 
         "descripcion": "Stich", 
         "cantidad": 1,
