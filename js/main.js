@@ -10,7 +10,7 @@ const carrito = [];
 const productos = [];
 const miLocalStorage = window.localStorage;
 const cargarProductos = async () => {
-    const response = await fetch("/json/productos.json");
+    const response = await fetch("../productos.json");
     const elementos = await response.json();
     elementos.forEach((elemento) => {
         productos.push(elemento);
