@@ -5,7 +5,7 @@
         "precio": 1370, 
         "descripcion": "Hexagonal Floreado", 
         "cantidad": 1,
-        "img": "img/1.jpg"
+        "img": "1.jpg"
     },
 
     {
@@ -14,7 +14,7 @@
         "precio": 1150, 
         "descripcion": "Hojas", 
         "cantidad": 1,
-        "img": "img/2.jpg"
+        "img": "2.jpg"
     },
 
     {
@@ -23,7 +23,7 @@
         "precio": 1420, 
         "descripcion": "Paz y flores", 
         "cantidad": 1,
-        "img": "img/3.jpg"
+        "img": "3.jpg"
     },
 
     
@@ -33,7 +33,7 @@
         "precio": 1600, 
         "descripcion": "Personalizado", 
         "cantidad": 1,
-        "img": "img/4.jpg"
+        "img": "4.jpg"
     },
 
     {
@@ -42,7 +42,7 @@
         "precio": 1570, 
         "descripcion": "Llama", 
         "cantidad": 1,
-        "img": "img/5.jpg"
+        "img": "5.jpg"
     },
 
     {
@@ -51,7 +51,7 @@
         "precio": 1480, 
         "descripcion": "Fase Lunar", 
         "cantidad": 1,
-        "img": "img/6.jpg"
+        "img": "6.jpg"
     },
 
     {
