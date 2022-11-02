@@ -5,7 +5,7 @@
         "precio": 1370, 
         "descripcion": "Hexagonal Floreado", 
         "cantidad": 1,
-        "img": "1.jpg"
+        "img": "./img/1.jpg"
     },
 
     {
@@ -14,7 +14,7 @@
         "precio": 1150, 
         "descripcion": "Hojas", 
         "cantidad": 1,
-        "img": "2.jpg"
+        "img": "./img/1.jpg"
     },
 
     {
@@ -23,7 +23,7 @@
         "precio": 1420, 
         "descripcion": "Paz y flores", 
         "cantidad": 1,
-        "img": "3.jpg"
+        "img": "./img/3.jpg"
     },
 
     
@@ -33,7 +33,7 @@
         "precio": 1600, 
         "descripcion": "Personalizado", 
         "cantidad": 1,
-        "img": "4.jpg"
+        "img": "./img/4.jpg"
     },
 
     {
@@ -42,7 +42,7 @@
         "precio": 1570, 
         "descripcion": "Llama", 
         "cantidad": 1,
-        "img": "5.jpg"
+        "img": "./img/5.jpg"
     },
 
     {
@@ -51,7 +51,7 @@
         "precio": 1480, 
         "descripcion": "Fase Lunar", 
         "cantidad": 1,
-        "img": "6.jpg"
+        "img": "./img/6.jpg"
     },
 
     {
@@ -60,7 +60,7 @@
         "precio": 1100, 
         "descripcion": "Maradona", 
         "cantidad": 1,
-        "img": "img/7.jpg"
+        "img": "./img/7.jpg"
     },
     
     {
@@ -69,7 +69,7 @@
         "precio": 1320, 
         "descripcion": "Mano de Fática", 
         "cantidad": 1,
-        "img": "img/8.jpg"
+        "img": "./img/8.jpg"
     },
     
     {
@@ -78,7 +78,7 @@
         "precio": 1600, 
         "descripcion": "Coya", 
         "cantidad": 1,
-        "img": "img/9.jpg"
+        "img": "./img/9.jpg"
     },
 
     {
@@ -87,7 +87,7 @@
         "precio": 1450, 
         "descripcion": "Perita Floreado", 
         "cantidad": 1,
-        "img": "img/10.jpg"
+        "img": "./img/10.jpg"
     },
     
     {
@@ -96,7 +96,7 @@
         "precio": 1400, 
         "descripcion": "Auto clásico", 
         "cantidad": 1,
-        "img": "img/11.jpg"
+        "img": "./img/11.jpg"
     },
 
     {
@@ -105,7 +105,7 @@
         "precio": 1100, 
         "descripcion": "Palmeras", 
         "cantidad": 1,
-        "img": "img/12.jpg"
+        "img": "./img/12.jpg"
     },
 
     {
@@ -113,7 +113,8 @@
         "nombre": "Diseño13", 
         "precio": 1250, 
         "descripcion": "Girasol", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "./img/13.jpg"
     },
 
     {
@@ -121,14 +122,16 @@
         "nombre": "Diseño14", 
         "precio": 1400, 
         "descripcion": "Combi Playera", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "./img/14.jpg"
     },
 
     {
         "id": 15, 
         "precio": 1370, 
         "descripcion": "Hexagonal Colores", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "./img/15.jpg"
     },
 
     {
@@ -136,7 +139,8 @@
         "nombre": "Diseño16", 
         "precio": 1420, 
         "descripcion": "Floreado", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "./img/16.jpg"
     },
     
     {
@@ -144,7 +148,8 @@
         "nombre": "Diseño17", 
         "precio": 1450, 
         "descripcion": "Bicicleta", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "./img/17.jpg"
     },
 
     {
@@ -152,7 +157,8 @@
         "nombre": "Diseño18", 
         "precio": 1350, 
         "descripcion": "Búho", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "./img/18.jpg"
     },
 
     {
@@ -160,7 +166,8 @@
         "nombre": "Diseño19", 
         "precio": 1100, 
         "descripcion": "Mapamundi", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "./img/19.jpg"
     },
 
     {
@@ -168,7 +175,8 @@
         "nombre": "Diseño20", 
         "precio": 1250, 
         "descripcion": "Stich", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "./img/20.jpg"
     },
 
     {
@@ -176,6 +184,7 @@
         "nombre": "Bombilla", 
         "precio": 720, 
         "descripcion": "Bombilla a elección", 
-        "cantidad": 1
+        "cantidad": 1,
+        "img": "./img/21.jpg"
     }
 ]
